@@ -1,1 +1,61 @@
-<p>register works!</p>
+<div class="form-group col-md-4">
+  <label for="firstName">First Name</label>
+  <input
+    type="text"
+    class="form-control"
+    id="firstName"
+    [(ngModel)]="userDetails.firstName"
+     aria-describedby="firstName"
+    placeholder="Enter First Name"
+  />
+</div>
+<div class="form-group col-md-4">
+    <label for="lastName">Last Name</label>
+    <input
+      type="text"
+      class="form-control"
+      [(ngModel)]="userDetails.lastName"
+      id="exampleInputEmail1"
+      aria-describedby="emailHelp"
+      placeholder="Enter email"
+    />
+  </div>    
+  <div class="form-group col-md-4">
+    <label for="age">Age</label>
+    <input
+      type="text"
+      class="form-control"
+      id="age"
+      aria-describedby="age"
+      placeholder="Enter age"
+      [(ngModel)]="userDetails.age"
+    />
+  </div>    
+  <div class="form-group col-md-4">
+    <label class="mr-4">Gender</label>
+    <input
+      type="radio"
+      name="gender"
+      class="mr-1"
+      value="M"
+      [(ngModel)]="userDetails.gender"
+    /> Male
+    <input
+    type="radio"
+    name="gender"
+    class="ml-4 mr-1"
+    value="F"
+    [(ngModel)]="userDetails.gender"
+  /> Female
+  </div>    
+  <div class="form-check">
+    <label class="form-check-label">
+        <input class="form-check-input"
+        type="checkbox" value="userDetails.agree"
+        [(ngModel)]="userDetails.agree"
+        checked="userDetails.agree">
+        I Agree Terms and conditions
+      </label>
+    </div>
+
+  <pre>{{userDetails|json}}</pre>
