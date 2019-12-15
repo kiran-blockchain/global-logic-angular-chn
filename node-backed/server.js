@@ -1,4 +1,4 @@
 var db = require("./config/mongoose");
-db();
+ db();
 var server = require("./config/express");
 server.listen(3000);
