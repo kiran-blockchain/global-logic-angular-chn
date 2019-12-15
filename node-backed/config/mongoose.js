@@ -1,0 +1,24 @@
+//all the db connectivity will be happening from here..
+//import the mongoose dependency..
+
+var mongoose = require("mongoose");
+var config = require("./config");
+var conenctionString = config.connection;
+
+var mongodb = function() {
+    mongoose.connect(conenctionString, {useNewUrlParser: true}).then(result=>{
+        console.log('DB Connected');
+    }).catch(err=>{
+        console.log(err);
+    })
+    // var db = mongoose.connection;
+    // db.on('error', console.error.bind(console, 'connection error:'));
+    // db.once('open', function() {
+    //     console.log("database connected");
+    // });
+    //import your models
+    require("../app/register/register.model");
+    require("../app/products/product.model");
+}
+
+module.exports = mongodb;
