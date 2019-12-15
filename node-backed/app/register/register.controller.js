@@ -13,7 +13,7 @@ registerCtrl.post = function(req, res, next) {
     var doc = new userSchema(req.body);
     doc.save(function(err, data) {
         if (err) {
-            console.log(err.errors.age.message);
+            //console.log(rors.err.erage.message);
             res.json({ result: "Error Occurred in Registering User" });
             // res.render("register", {
             //     showSuccess: true,
