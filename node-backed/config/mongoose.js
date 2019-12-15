@@ -6,7 +6,8 @@ var config = require("./config");
 var conenctionString = config.connection;
 
 var mongodb = function() {
-    mongoose.connect(conenctionString, {useNewUrlParser: true}).then(result=>{
+    mongoose.connect(conenctionString, {useNewUrlParser: true,})
+    .then(result=>{
         console.log('DB Connected');
     }).catch(err=>{
         console.log(err);
