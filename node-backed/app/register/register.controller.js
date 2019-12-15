@@ -20,11 +20,11 @@ registerCtrl.post = function(req, res, next) {
             //     message: "Something Went Wrong"
             // });
         } else {
-            next();
-            // res.json({
-            //     result: "user Registered ",
-            //     date: data
-            // });
+            //next();
+            res.json({
+                result: "user Registered ",
+                date: data
+            });
             // res.render("register", {
             //     showSuccess: true,
             //     message: "Data Inserted"

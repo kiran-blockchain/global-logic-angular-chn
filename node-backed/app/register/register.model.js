@@ -8,7 +8,8 @@ var user = {
     phone: { type: Number, required: [true, "Phone number is required"] },
     email: { type: String },
     age: { type: Number, min: [18, "Minimum age is 18"], max: [99, "maximum age is 99"] },
-    password: { type: String, required: true }
+    password: { type: String, required: true },
+    country:{type:String}
 };
 //ste3
 var userSchema = mongoose.Schema(user);
